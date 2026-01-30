@@ -68,6 +68,11 @@ function Empleados() {
   });
   const [formNota, setFormNota] = useState({ nota: '' });
 
+  const seleccionarEmpleado = useCallback((empleado) => {
+    setEmpleadoActivo(empleado);
+    cargarDetalleEmpleado(empleado.id);
+  }, []);
+
   const cargarEmpleados = useCallback(async () => {
     try {
       const response = await api.get('/empleados');
@@ -78,16 +83,11 @@ function Empleados() {
     } catch (error) {
       console.error('Error al cargar empleados:', error);
     }
-  }, [empleadoActivo]);
+  }, [empleadoActivo, seleccionarEmpleado]);
 
   useEffect(() => {
     cargarEmpleados();
   }, [cargarEmpleados]);
-
-  const seleccionarEmpleado = (empleado) => {
-    setEmpleadoActivo(empleado);
-    cargarDetalleEmpleado(empleado.id);
-  };
 
   const cargarDetalleEmpleado = async (id) => {
     try {

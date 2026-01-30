@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   Box,
   Paper,
@@ -24,12 +24,7 @@ function Calendario() {
   const [eventos, setEventos] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    cargarCitas();
-    cargarEventos();
-  }, [fechaActual]);
-
-  const cargarCitas = async () => {
+  const cargarCitas = useCallback(async () => {
     try {
       const inicio = startOfMonth(fechaActual);
       const fin = endOfMonth(fechaActual);
@@ -44,9 +39,9 @@ function Calendario() {
     } catch (error) {
       console.error('Error al cargar citas:', error);
     }
-  };
+  }, [fechaActual]);
 
-  const cargarEventos = async () => {
+  const cargarEventos = useCallback(async () => {
     try {
       const inicio = startOfMonth(fechaActual);
       const fin = endOfMonth(fechaActual);
@@ -60,7 +55,12 @@ function Calendario() {
     } catch (error) {
       console.error('Error al cargar eventos:', error);
     }
-  };
+  }, [fechaActual]);
+
+  useEffect(() => {
+    cargarCitas();
+    cargarEventos();
+  }, [cargarCitas, cargarEventos]);
 
   const diasDelMes = eachDayOfInterval({
     start: startOfMonth(fechaActual),
