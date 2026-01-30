@@ -176,9 +176,9 @@ export const PROJECTS: Project[] = [
     highlights: ['Panel administrativo', 'Gestión de citas', 'Vistas internas'],
     tags: ['Panel', 'Full Stack', 'React'],
     links: [
-      { label: 'Ver demo', href: 'http://localhost:3000/login' }
+      { label: 'Ver demo', href: 'https://gestionpeluqueria.vercel.app/login' }
     ],
-    cta: { label: 'Ver demo', href: 'http://localhost:3000/login' }
+    cta: { label: 'Ver demo', href: 'https://gestionpeluqueria.vercel.app/login' }
   },
   {
     title: 'InkSoul Studio',
