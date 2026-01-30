@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Box,
   Paper,
@@ -68,11 +68,7 @@ function Empleados() {
   });
   const [formNota, setFormNota] = useState({ nota: '' });
 
-  useEffect(() => {
-    cargarEmpleados();
-  }, []);
-
-  const cargarEmpleados = async () => {
+  const cargarEmpleados = useCallback(async () => {
     try {
       const response = await api.get('/empleados');
       setEmpleados(response.data);
@@ -82,7 +78,11 @@ function Empleados() {
     } catch (error) {
       console.error('Error al cargar empleados:', error);
     }
-  };
+  }, [empleadoActivo]);
+
+  useEffect(() => {
+    cargarEmpleados();
+  }, [cargarEmpleados]);
 
   const seleccionarEmpleado = (empleado) => {
     setEmpleadoActivo(empleado);

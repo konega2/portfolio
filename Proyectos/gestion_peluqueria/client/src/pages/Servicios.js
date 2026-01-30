@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Box,
   Paper,
@@ -51,11 +51,7 @@ function Servicios() {
   const [formData, setFormData] = useState(defaultForm);
   const [soloActivos, setSoloActivos] = useState(true);
 
-  useEffect(() => {
-    cargarServicios();
-  }, [busqueda, soloActivos]);
-
-  const cargarServicios = async () => {
+  const cargarServicios = useCallback(async () => {
     try {
       const response = await api.get('/servicios', {
         params: soloActivos ? { activo: true } : {},
@@ -76,7 +72,11 @@ function Servicios() {
     } catch (error) {
       console.error('Error al cargar servicios:', error);
     }
-  };
+  }, [busqueda, soloActivos]);
+
+  useEffect(() => {
+    cargarServicios();
+  }, [cargarServicios]);
 
   const categorias = useMemo(() => {
     const set = new Set();

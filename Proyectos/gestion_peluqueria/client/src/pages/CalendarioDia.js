@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Box,
   Paper,
@@ -66,11 +66,7 @@ function CalendarioDia() {
     }
   }, [fecha]);
 
-  useEffect(() => {
-    cargarDia();
-  }, [diaSeleccionado]);
-
-  const cargarDia = async () => {
+  const cargarDia = useCallback(async () => {
     try {
       const inicio = startOfDay(diaSeleccionado);
       const fin = endOfDay(diaSeleccionado);
@@ -87,7 +83,11 @@ function CalendarioDia() {
     } catch (error) {
       console.error('Error al cargar el día:', error);
     }
-  };
+  }, [diaSeleccionado]);
+
+  useEffect(() => {
+    cargarDia();
+  }, [cargarDia]);
 
   const abrirEvento = (evento = null, hora = null) => {
     if (evento) {
@@ -294,7 +294,6 @@ function CalendarioDia() {
         <Box>
           {horasDia.map((hora) => {
             const itemsHora = [
-              ...
               citasConHora.filter((cita) => cita.hora === hora).map((cita) => ({
                 tipo: 'cita',
                 id: cita.id,

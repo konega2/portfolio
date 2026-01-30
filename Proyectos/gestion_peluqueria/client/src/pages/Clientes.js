@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   Box,
   Paper,
@@ -47,11 +47,7 @@ function Clientes() {
     notas: '',
   });
 
-  useEffect(() => {
-    cargarClientes();
-  }, [busqueda]);
-
-  const cargarClientes = async () => {
+  const cargarClientes = useCallback(async () => {
     try {
       const response = await api.get('/clientes', {
         params: busqueda ? { busqueda } : {},
@@ -60,7 +56,11 @@ function Clientes() {
     } catch (error) {
       console.error('Error al cargar clientes:', error);
     }
-  };
+  }, [busqueda]);
+
+  useEffect(() => {
+    cargarClientes();
+  }, [cargarClientes]);
 
   const handleOpenDialog = (cliente = null) => {
     if (cliente) {

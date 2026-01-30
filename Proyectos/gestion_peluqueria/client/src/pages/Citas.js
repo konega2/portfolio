@@ -39,7 +39,6 @@ function Citas() {
   const [citas, setCitas] = useState([]);
   const [clientes, setClientes] = useState([]);
   const [servicios, setServicios] = useState([]);
-  const [empleados, setEmpleados] = useState([]);
   const [openDialog, setOpenDialog] = useState(false);
   const [citaActual, setCitaActual] = useState(null);
   const [usuarioActual, setUsuarioActual] = useState(null);

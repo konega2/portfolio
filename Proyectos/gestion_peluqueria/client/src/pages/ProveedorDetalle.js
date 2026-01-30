@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Box,
   Paper,
@@ -34,28 +34,28 @@ function ProveedorDetalle() {
   const [busquedaPedido, setBusquedaPedido] = useState('');
   const [filtroEstado, setFiltroEstado] = useState('todos');
 
-  useEffect(() => {
-    cargarProveedor();
-    cargarPedidos();
-  }, [id]);
-
-  const cargarProveedor = async () => {
+  const cargarProveedor = useCallback(async () => {
     try {
       const response = await api.get(`/proveedores/${id}`);
       setProveedor(response.data);
     } catch (error) {
       console.error('Error al cargar proveedor:', error);
     }
-  };
+  }, [id]);
 
-  const cargarPedidos = async () => {
+  const cargarPedidos = useCallback(async () => {
     try {
       const response = await api.get('/proveedores-pedidos', { params: { proveedor_id: id } });
       setPedidos(response.data);
     } catch (error) {
       console.error('Error al cargar pedidos:', error);
     }
-  };
+  }, [id]);
+
+  useEffect(() => {
+    cargarProveedor();
+    cargarPedidos();
+  }, [cargarProveedor, cargarPedidos]);
 
   const registrarPedido = async () => {
     if (!formPedido.producto || !formPedido.cantidad) return;
