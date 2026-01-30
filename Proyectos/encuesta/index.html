@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción - La Visteta</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="survey-container">
+        <!-- Header con logo -->
+        <header class="survey-header">
+            <div class="logo-container">
+                <img src="../visteta/images/logo.jpg" alt="La Visteta" class="logo">
+                <h1>La Visteta</h1>
+            </div>
+            <p class="survey-subtitle">Tu opinión nos ayuda a mejorar</p>
+        </header>
+
+        <!-- Progreso -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span class="progress-text" id="progressText">1 de 8</span>
+        </div>
+
+        <!-- Formulario de encuesta -->
+        <form id="surveyForm" class="survey-form">
+            
+            <!-- Pregunta 1: Calificación general -->
+            <div class="question-slide active" data-question="1">
+                <div class="question-container">
+                    <div class="question-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h2 class="question-title">¿Cómo calificarías tu experiencia general en La Visteta?</h2>
+                    <div class="star-rating" data-field="calificacion_general">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <p class="rating-text">Toca las estrellas para calificar</p>
+                </div>
+            </div>
+
+            <!-- Pregunta 2: Calidad de la comida -->
+            <div class="question-slide" data-question="2">
+                <div class="question-container">
+                    <div class="question-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h2 class="question-title">¿Qué te pareció la calidad de la comida?</h2>
+                    <p class="question-subtitle">Primero califícanos con estrellas, luego puedes seleccionar qué aspectos destacar</p>
+                    <div class="star-rating" data-field="calidad_comida">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="options-section">
+                        <h4 class="options-header positive-header">✅ Lo que nos gustó</h4>
+                        <div class="options-grid positive-options">
+                            <div class="option-card positive" data-field="aspecto_comida" data-value="sabor">
+                                <i class="fas fa-heart"></i>
+                                <span>Sabor excelente</span>
+                            </div>
+                            <div class="option-card positive" data-field="aspecto_comida" data-value="presentacion">
+                                <i class="fas fa-eye"></i>
+                                <span>Buena presentación</span>
+                            </div>
+                            <div class="option-card positive" data-field="aspecto_comida" data-value="temperatura">
+                                <i class="fas fa-thermometer-half"></i>
+                                <span>Temperatura perfecta</span>
+                            </div>
+                            <div class="option-card positive" data-field="aspecto_comida" data-value="cantidad">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Buena cantidad</span>
+                            </div>
+                        </div>
+                        
+                        <h4 class="options-header negative-header">⚠️ Puntos a mejorar</h4>
+                        <div class="options-grid negative-options">
+                            <div class="option-card negative" data-field="aspecto_comida_negativo" data-value="sabor_malo">
+                                <i class="fas fa-frown"></i>
+                                <span>Sabor mejorable</span>
+                            </div>
+                            <div class="option-card negative" data-field="aspecto_comida_negativo" data-value="frio">
+                                <i class="fas fa-snowflake"></i>
+                                <span>Llegó frío</span>
+                            </div>
+                            <div class="option-card negative" data-field="aspecto_comida_negativo" data-value="poca_cantidad">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Poca cantidad</span>
+                            </div>
+                            <div class="option-card negative" data-field="aspecto_comida_negativo" data-value="caro">
+                                <i class="fas fa-euro-sign"></i>
+                                <span>Muy caro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 3: Servicio -->
+            <div class="question-slide" data-question="3">
+                <div class="question-container">
+                    <div class="question-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h2 class="question-title">¿Cómo fue la atención del personal?</h2>
+                    <p class="question-subtitle">Califícanos con estrellas y selecciona qué aspectos destacar</p>
+                    <div class="star-rating" data-field="calidad_servicio">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="options-section">
+                        <h4 class="options-header positive-header">✅ Lo que nos gustó</h4>
+                        <div class="options-grid positive-options">
+                            <div class="option-card positive" data-field="aspecto_servicio" data-value="amabilidad">
+                                <i class="fas fa-smile"></i>
+                                <span>Muy amables</span>
+                            </div>
+                            <div class="option-card positive" data-field="aspecto_servicio" data-value="rapidez">
+                                <i class="fas fa-clock"></i>
+                                <span>Servicio rápido</span>
+                            </div>
+                            <div class="option-card positive" data-field="aspecto_servicio" data-value="atencion">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Muy atentos</span>
+                            </div>
+                            <div class="option-card positive" data-field="aspecto_servicio" data-value="profesional">
+                                <i class="fas fa-medal"></i>
+                                <span>Profesionales</span>
+                            </div>
+                        </div>
+                        
+                        <h4 class="options-header negative-header">⚠️ Puntos a mejorar</h4>
+                        <div class="options-grid negative-options">
+                            <div class="option-card negative" data-field="aspecto_servicio_negativo" data-value="lento">
+                                <i class="fas fa-hourglass-half"></i>
+                                <span>Servicio lento</span>
+                            </div>
+                            <div class="option-card negative" data-field="aspecto_servicio_negativo" data-value="poco_amable">
+                                <i class="fas fa-meh"></i>
+                                <span>Poco amables</span>
+                            </div>
+                            <div class="option-card negative" data-field="aspecto_servicio_negativo" data-value="desorganizado">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Desorganizado</span>
+                            </div>
+                            <div class="option-card negative" data-field="aspecto_servicio_negativo" data-value="olvidos">
+                                <i class="fas fa-question-circle"></i>
+                                <span>Se olvidan cosas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 4: Ambiente -->
+            <div class="question-slide" data-question="4">
+                <div class="question-container">
+                    <div class="question-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h2 class="question-title">¿Qué te pareció el ambiente del restaurante?</h2>
+                    <p class="question-subtitle">Califícanos con estrellas y selecciona qué aspectos destacar</p>
+                    <div class="star-rating" data-field="ambiente">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="options-section">
+                        <h4 class="options-header positive-header">✅ Lo que nos gustó</h4>
+                        <div class="options-grid positive-options">
+                            <div class="option-card positive" data-field="aspecto_ambiente" data-value="acogedor">
+                                <i class="fas fa-heart"></i>
+                                <span>Muy acogedor</span>
+                            </div>
+                            <div class="option-card positive" data-field="aspecto_ambiente" data-value="limpio">
+                                <i class="fas fa-sparkles"></i>
+                                <span>Muy limpio</span>
+                            </div>
+                            <div class="option-card positive" data-field="aspecto_ambiente" data-value="musica">
+                                <i class="fas fa-music"></i>
+                                <span>Buena música</span>
+                            </div>
+                            <div class="option-card positive" data-field="aspecto_ambiente" data-value="decoracion">
+                                <i class="fas fa-palette"></i>
+                                <span>Bonita decoración</span>
+                            </div>
+                        </div>
+                        
+                        <h4 class="options-header negative-header">⚠️ Puntos a mejorar</h4>
+                        <div class="options-grid negative-options">
+                            <div class="option-card negative" data-field="aspecto_ambiente_negativo" data-value="ruidoso">
+                                <i class="fas fa-volume-up"></i>
+                                <span>Muy ruidoso</span>
+                            </div>
+                            <div class="option-card negative" data-field="aspecto_ambiente_negativo" data-value="sucio">
+                                <i class="fas fa-times-circle"></i>
+                                <span>Poco limpio</span>
+                            </div>
+                            <div class="option-card negative" data-field="aspecto_ambiente_negativo" data-value="musica_alta">
+                                <i class="fas fa-volume-mute"></i>
+                                <span>Música muy alta</span>
+                            </div>
+                            <div class="option-card negative" data-field="aspecto_ambiente_negativo" data-value="incomodo">
+                                <i class="fas fa-chair"></i>
+                                <span>Incómodo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 5: Precio -->
+            <div class="question-slide" data-question="5">
+                <div class="question-container">
+                    <div class="question-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h2 class="question-title">¿Cómo consideras la relación calidad-precio?</h2>
+                    <div class="price-options">
+                        <div class="price-card" data-field="relacion_precio" data-value="excelente">
+                            <i class="fas fa-thumbs-up"></i>
+                            <h3>Excelente</h3>
+                            <p>Vale cada euro pagado</p>
+                        </div>
+                        <div class="price-card" data-field="relacion_precio" data-value="buena">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Buena</h3>
+                            <p>Precio justo por la calidad</p>
+                        </div>
+                        <div class="price-card" data-field="relacion_precio" data-value="regular">
+                            <i class="fas fa-minus-circle"></i>
+                            <h3>Regular</h3>
+                            <p>Podría ser mejor</p>
+                        </div>
+                        <div class="price-card" data-field="relacion_precio" data-value="cara">
+                            <i class="fas fa-thumbs-down"></i>
+                            <h3>Caro</h3>
+                            <p>No vale lo que cuesta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 6: Recomendación -->
+            <div class="question-slide" data-question="6">
+                <div class="question-container">
+                    <div class="question-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h2 class="question-title">¿Recomendarías La Visteta a tus amigos?</h2>
+                    <div class="recommendation-scale">
+                        <p class="scale-label">Del 1 al 10, ¿qué probabilidad hay de que nos recomiendes?</p>
+                        <div class="nps-scale" data-field="recomendacion">
+                            <div class="nps-number" data-value="1">1</div>
+                            <div class="nps-number" data-value="2">2</div>
+                            <div class="nps-number" data-value="3">3</div>
+                            <div class="nps-number" data-value="4">4</div>
+                            <div class="nps-number" data-value="5">5</div>
+                            <div class="nps-number" data-value="6">6</div>
+                            <div class="nps-number" data-value="7">7</div>
+                            <div class="nps-number" data-value="8">8</div>
+                            <div class="nps-number" data-value="9">9</div>
+                            <div class="nps-number" data-value="10">10</div>
+                        </div>
+                        <div class="scale-labels">
+                            <span>Nada probable</span>
+                            <span>Muy probable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 7: Comentarios -->
+            <div class="question-slide" data-question="7">
+                <div class="question-container">
+                    <div class="question-icon">
+                        <i class="fas fa-comment-alt"></i>
+                    </div>
+                    <h2 class="question-title">¿Hay algo que te gustaría decirnos?</h2>
+                    <div class="comment-section">
+                        <textarea 
+                            name="comentarios" 
+                            id="comentarios" 
+                            placeholder="Cuéntanos qué podemos mejorar o qué te gustó más..."
+                            rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 8: Datos contacto (opcional) -->
+            <div class="question-slide" data-question="8">
+                <div class="question-container">
+                    <div class="question-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h2 class="question-title">¿Te gustaría que te contactemos? (Opcional)</h2>
+                    <p class="subtitle">Para ofertas especiales y eventos exclusivos</p>
+                    <div class="contact-form">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="nombre" id="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" name="email" id="email" placeholder="Tu email">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" name="telefono" id="telefono" placeholder="Tu teléfono (opcional)">
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="newsletter" id="newsletter">
+                            <label for="newsletter">
+                                <i class="fas fa-envelope-open-text"></i>
+                                Quiero recibir ofertas especiales y novedades
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- Navegación -->
+        <div class="navigation">
+            <button type="button" id="prevBtn" class="nav-btn prev-btn" disabled>
+                <i class="fas fa-chevron-left"></i>
+                Anterior
+            </button>
+            <button type="button" id="nextBtn" class="nav-btn next-btn">
+                Siguiente
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <button type="submit" id="submitBtn" class="nav-btn submit-btn" style="display: none;">
+                <i class="fas fa-paper-plane"></i>
+                Enviar Encuesta
+            </button>
+        </div>
+    </div>
+
+    <!-- Pantalla de agradecimiento -->
+    <div class="thank-you-screen" id="thankYouScreen" style="display: none;">
+        <div class="thank-you-content">
+            <div class="thank-you-animation">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h1>¡Muchas gracias!</h1>
+            <p>Tu opinión es muy valiosa para nosotros y nos ayuda a seguir mejorando.</p>
+            <div class="thank-you-message">
+                <p>🌟 Tu experiencia en La Visteta significa mucho para nosotros</p>
+                <p>🎯 Usaremos tus comentarios para mejorar nuestro servicio</p>
+                <p>💙 Esperamos verte pronto de nuevo</p>
+            </div>
+            <div class="social-links">
+                <h3>Síguenos en redes sociales</h3>
+                <div class="social-buttons">
+                    <a href="https://www.facebook.com/lavisteta/?locale=es_ES" target="_blank" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/la_visteta/" target="_blank" class="social-btn instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tripadvisor.es/Restaurant_Review-g2480396-d4411005-Reviews-La_Visteta-Barx_Province_of_Valencia_Valencian_Community.html" target="_blank" class="social-btn tripadvisor">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Crédito konega.es -->
+            <div class="konega-credit">
+                <p>Creado por <a href="https://konega.es" target="_blank" rel="noopener">konega.es</a></p>
+            </div>
+            
+            <!-- Contador de redirección -->
+            <div class="redirect-info">
+                <p id="redirectMessage">Redirigiendo en <span id="countdown">15</span> segundos...</p>
+            </div>
+            
+            <button class="close-btn" onclick="redirectToWebsite()">
+                <i class="fas fa-times"></i>
+                Cerrar
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+    "total_encuestas": 6,
+    "promedio_general": 1.5,
+    "promedio_comida": 0,
+    "promedio_servicio": 0,
+    "promedio_ambiente": 0,
+    "promedio_precio": {
+        "cara": 6
+    },
+    "promedio_recomendacion": 10,
+    "aspectos_comida": [],
+    "aspectos_servicio": {
+        "profesional": 1
+    },
+    "aspectos_ambiente": {
+        "limpio": 1
+    },
+    "comentarios_recientes": [
+        {
+            "comentario": "a",
+            "fecha": "2025-07-26 22:27:09",
+            "calificacion_general": 1
+        }
+    ],
+    "ultima_actualizacion": "2025-07-26 22:27:09",
+    "aspectos_comida_negativo": {
+        "caro": 5
+    },
+    "aspectos_servicio_negativo": {
+        "olvidos": 4
+    },
+    "aspectos_ambiente_negativo": {
+        "incomodo": 6
+    }
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Áurea Estudio Capilar — Peluquería & Color</title>
+  <meta name="description" content="Peluquería boutique con colorimetría avanzada, cortes de autor y rituales capilares personalizados." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <canvas id="hair-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <div class="nav-shell">
+      <div class="nav-left">
+        <a class="brand" href="#inicio" aria-label="Áurea Estudio Capilar">
+          <span class="brand-mark">Á</span>
+        </a>
+        <div class="nav-status">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>Horario · 09:30–20:30</span>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#experiencia" data-step="01">Experiencia</a>
+        <a href="#servicios" data-step="02">Servicios</a>
+        <a href="#equipo" data-step="03">Equipo</a>
+        <a href="#galeria" data-step="04">Galería</a>
+        <a href="#precios" data-step="05">Precios</a>
+      </nav>
+      <div class="nav-right">
+        <a class="nav-contact" href="tel:+34612345678">+34 612 345 678</a>
+        <a href="#agenda" class="cta">Reservar</a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-panel" aria-hidden="true">
+      <a href="#experiencia">Experiencia</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#galeria">Galería</a>
+      <a href="#precios">Precios</a>
+      <a href="#agenda">Reservar</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#faq">FAQ</a>
+      <a href="#blog">Journal</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">Peluquería editorial · Barcelona</p>
+        <h1>Tu cabello como obra viva: luz, textura y movimiento.</h1>
+        <p>
+          Somos un estudio creativo especializado en color, rituales capilares y cortes de autor.
+          Diseñamos planes personalizados con diagnóstico 3D, infusiones botánicas y estilismo
+          para eventos.
+        </p>
+        <div class="hero-actions">
+          <a href="#agenda" class="button primary">Reservar diagnóstico</a>
+          <a href="#experiencia" class="button ghost">Ver la experiencia</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <strong>4.9</strong>
+            <span>Valoración media</span>
+          </div>
+          <div>
+            <strong>6</strong>
+            <span>Rituales exclusivos</span>
+          </div>
+          <div>
+            <strong>12</strong>
+            <span>Artistas residentes</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="halo"></div>
+        <div class="floating-card">
+          <h3>Diagnóstico Lumínico</h3>
+          <p>Mapa de brillo y porosidad en 8 minutos.</p>
+        </div>
+        <div class="floating-card">
+          <h3>Color Signature</h3>
+          <p>Mezclas personalizadas para tu tono de piel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experiencia">
+      <div class="section-title">
+        <p>Experiencia Áurea</p>
+        <h2>Una peluquería inmersiva y sensorial</h2>
+      </div>
+      <div class="experience-grid">
+        <article>
+          <h3>Diagnóstico en tiempo real</h3>
+          <p>Mapeamos tu cabello con luz polarizada para decidir corte, tratamiento y color ideal.</p>
+        </article>
+        <article>
+          <h3>Rituales capilares</h3>
+          <p>Infusiones botánicas, vapor ultrasónico y masajes craneales personalizados.</p>
+        </article>
+        <article>
+          <h3>Estilismo editorial</h3>
+          <p>Peinados con técnicas de movimiento natural que duran todo el día.</p>
+        </article>
+        <article>
+          <h3>Zona de color silenciosa</h3>
+          <p>Cabinas acústicas con playlists diseñadas según tu ritmo cardíaco.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="services" id="servicios">
+      <div class="section-title">
+        <p>Servicios</p>
+        <h2>Tratamientos diseñados como piezas de autor</h2>
+      </div>
+      <div class="service-cards">
+        <article>
+          <h3>Corte de Autor</h3>
+          <p>Geometría personalizada y asesoría de estilo.</p>
+          <span>45-75 min</span>
+        </article>
+        <article>
+          <h3>Color Signature</h3>
+          <p>Mezclas únicas con reflejos multidimensionales.</p>
+          <span>120-150 min</span>
+        </article>
+        <article>
+          <h3>Ritual Seda Líquida</h3>
+          <p>Hidratación profunda con vapor y microampollas.</p>
+          <span>60 min</span>
+        </article>
+        <article>
+          <h3>Ondas Vivas</h3>
+          <p>Movimiento orgánico con fijación invisible.</p>
+          <span>40-60 min</span>
+        </article>
+        <article>
+          <h3>Novia / Editorial</h3>
+          <p>Prueba + estilismo completo para eventos.</p>
+          <span>120 min</span>
+        </article>
+        <article>
+          <h3>Detox Cuero Cabelludo</h3>
+          <p>Limpieza purificante con exfoliación suave.</p>
+          <span>35 min</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="team" id="equipo">
+      <div class="section-title">
+        <p>Equipo</p>
+        <h2>Artistas residentes con mirada internacional</h2>
+      </div>
+      <div class="team-grid">
+        <article>
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Clara Vives, directora creativa" />
+          <div>
+            <h3>Clara Vives</h3>
+            <span>Dirección creativa · Colorista</span>
+          </div>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=800&q=80" alt="Marco Leone, experto en cortes" />
+          <div>
+            <h3>Marco Leone</h3>
+            <span>Master Cut · London School</span>
+          </div>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80" alt="Nerea Solé, especialista en rituales" />
+          <div>
+            <h3>Nerea Solé</h3>
+            <span>Rituales & cuero cabelludo</span>
+          </div>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?auto=format&fit=crop&w=800&q=80" alt="Aarón Vidal, estilista" />
+          <div>
+            <h3>Aarón Vidal</h3>
+            <span>Estilista editorial</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="gallery" id="galeria">
+      <div class="section-title">
+        <p>Galería</p>
+        <h2>Texturas reales, luz natural, movimientos auténticos</h2>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Cabello con ondas suaves" />
+        <img src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?auto=format&fit=crop&w=900&q=80" alt="Coloración cálida" />
+        <img src="https://images.unsplash.com/photo-1503342452485-86b7f54527ef?auto=format&fit=crop&w=900&q=80" alt="Trenza editorial" />
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Corte corto moderno" />
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Brillo y volumen" />
+        <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=900&q=80" alt="Estilismo de pasarela" />
+      </div>
+    </section>
+
+    <section class="pricing" id="precios">
+      <div class="section-title">
+        <p>Precios</p>
+        <h2>Tarifas claras, resultados extraordinarios</h2>
+      </div>
+      <div class="pricing-grid">
+        <article>
+          <h3>Diagnóstico Lumínico</h3>
+          <p>Escaneo + plan capilar digital.</p>
+          <strong>25 €</strong>
+        </article>
+        <article class="featured">
+          <h3>Color Signature</h3>
+          <p>Color + tonalización + styling.</p>
+          <strong>140 €</strong>
+          <span>Incluye ritual Seda Líquida</span>
+        </article>
+        <article>
+          <h3>Corte de Autor</h3>
+          <p>Corte + asesoría + styling.</p>
+          <strong>55 €</strong>
+        </article>
+        <article>
+          <h3>Ritual Seda Líquida</h3>
+          <p>Hidratación profunda en cabina vapor.</p>
+          <strong>45 €</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="testimonials" id="opiniones">
+      <div class="section-title">
+        <p>Opiniones</p>
+        <h2>Clientes que vuelven por el efecto Áurea</h2>
+      </div>
+      <div class="testimonial-track">
+        <article>
+          <p>“No es una peluquería, es un laboratorio de brillo. Salí con un color que parece natural pero único.”</p>
+          <span>Julia M., productora creativa</span>
+        </article>
+        <article>
+          <p>“El masaje craneal y el vapor me cambiaron el día. El corte quedó perfecto.”</p>
+          <span>Arnau R., arquitecto</span>
+        </article>
+        <article>
+          <p>“Me asesoraron hasta con el peinado para mi boda. Todo impecable.”</p>
+          <span>Laia G., diseñadora</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="agenda" id="agenda">
+      <div class="section-title">
+        <p>Agenda</p>
+        <h2>Reserva tu momento sin fricción</h2>
+      </div>
+      <div class="agenda-grid">
+        <form class="booking">
+          <h3 class="form-title">Nueva reserva</h3>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" type="text" placeholder="Introduce tu nombre" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="servicio">Servicio principal</label>
+              <div class="select-wrapper">
+                <select id="servicio" required>
+                  <option value="" disabled selected>Elige tu tratamiento</option>
+                  <option value="corte">✂️ Corte de Autor · 55€</option>
+                  <option value="color">🎨 Color Signature · 140€</option>
+                  <option value="ritual">💧 Ritual Seda Líquida · 45€</option>
+                  <option value="ondas">🌊 Ondas Vivas · 50€</option>
+                  <option value="novia">💍 Novia / Editorial · 120€</option>
+                  <option value="detox">🌿 Detox Cuero Cabelludo · 35€</option>
+                </select>
+                <span class="select-arrow" aria-hidden="true">▼</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-row form-row-2">
+            <div class="form-field">
+              <label for="fecha">Fecha preferida</label>
+              <input id="fecha" type="date" required />
+            </div>
+            <div class="form-field">
+              <label for="hora">Hora</label>
+              <input id="hora" type="time" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="comentarios">Comentarios (opcional)</label>
+              <textarea id="comentarios" rows="4" placeholder="Cuéntanos tu idea o preferencias especiales"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="button primary">✨ Solicitar cita</button>
+            <p class="form-note">📱 Te confirmamos por WhatsApp en menos de 2 horas</p>
+          </div>
+        </form>
+        <div class="agenda-info">
+          <div class="live-panel">
+            <h3>Disponibilidad en vivo</h3>
+            <ul id="slots"></ul>
+          </div>
+          <div class="studio-card">
+            <h3>Áurea Estudio Capilar</h3>
+            <p>Carrer del Sol 28, Eixample — Barcelona</p>
+            <p>+34 612 345 678 · hola@aureaestudio.com</p>
+            <div class="hours">
+              <span>Lun–Vie</span>
+              <span>09:30 – 20:30</span>
+              <span>Sáb</span>
+              <span>09:00 – 14:00</span>
+            </div>
+            <a class="button ghost" href="#">Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="section-title">
+        <p>FAQ</p>
+        <h2>Resolvemos tus dudas antes de llegar</h2>
+      </div>
+      <div class="faq-grid">
+        <details>
+          <summary>¿Necesito diagnóstico para hacer color?</summary>
+          <p>Sí, el diagnóstico lumínico nos permite crear una fórmula exacta para tu tono y textura.</p>
+        </details>
+        <details>
+          <summary>¿Trabajáis con cabello rizado?</summary>
+          <p>Somos especialistas en rizos definidos y cortes en seco para dar forma sin frizz.</p>
+        </details>
+        <details>
+          <summary>¿Puedo traer mi propio tratamiento?</summary>
+          <p>Preferimos trabajar con nuestras fórmulas, pero podemos adaptar tu ritual si lo deseas.</p>
+        </details>
+        <details>
+          <summary>¿Ofrecéis packs para eventos?</summary>
+          <p>Sí, contamos con packs de novia, madrina y editoriales con pruebas previas.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="blog" id="blog">
+      <div class="section-title">
+        <p>Journal</p>
+        <h2>Ideas, tendencias y cuidado capilar</h2>
+      </div>
+      <div class="blog-grid">
+        <article>
+          <h3>Cómo mantener el brillo del color en invierno</h3>
+          <p>Rutinas simples que preservan la luminosidad sin resecar.</p>
+          <span>5 min lectura</span>
+        </article>
+        <article>
+          <h3>Rizos con definición natural</h3>
+          <p>Tres pasos para rizos suaves sin rigidez.</p>
+          <span>7 min lectura</span>
+        </article>
+        <article>
+          <h3>La ciencia detrás del vapor capilar</h3>
+          <p>Por qué la hidratación con vapor es más efectiva.</p>
+          <span>4 min lectura</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h3>Áurea Estudio Capilar</h3>
+      <p>Peluquería boutique con rituales sensoriales y color de autor.</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>hola@aureaestudio.com</p>
+      <p>+34 612 345 678</p>
+    </div>
+    <div>
+      <h4>Redes</h4>
+      <p>Instagram · TikTok · Pinterest</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

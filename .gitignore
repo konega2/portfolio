@@ -1,0 +1,9 @@
+node_modules
+.venv
+**/.venv
+.dist
+dist
+.vite
+.DS_Store
+.env
+.env.*

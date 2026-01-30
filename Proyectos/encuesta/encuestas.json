@@ -1,0 +1,111 @@
+[
+    {
+        "id": "survey_1753561064291_7s7ivanz8",
+        "calificacion_general": 3,
+        "recomendacion": 10,
+        "aspecto_comida_negativo": [
+            "caro"
+        ],
+        "aspecto_servicio_negativo": [
+            "olvidos"
+        ],
+        "aspecto_ambiente_negativo": [
+            "incomodo"
+        ],
+        "relacion_precio": "cara",
+        "fecha_envio": "2025-07-26 22:17:44",
+        "ip_address": "::1",
+        "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36"
+    },
+    {
+        "id": "survey_1753561356326_jc2u0h5a7",
+        "nombre": "a",
+        "calificacion_general": 1,
+        "recomendacion": 10,
+        "aspecto_ambiente": [
+            "limpio"
+        ],
+        "aspecto_comida_negativo": [],
+        "aspecto_servicio_negativo": [],
+        "aspecto_ambiente_negativo": [
+            "incomodo"
+        ],
+        "relacion_precio": "cara",
+        "fecha_envio": "2025-07-26 22:22:36",
+        "ip_address": "::1",
+        "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36"
+    },
+    {
+        "id": "survey_1753561418367_93q8yjoro",
+        "calificacion_general": 1,
+        "recomendacion": 10,
+        "aspecto_comida_negativo": [
+            "caro"
+        ],
+        "aspecto_servicio_negativo": [
+            "olvidos"
+        ],
+        "aspecto_ambiente_negativo": [
+            "incomodo"
+        ],
+        "relacion_precio": "cara",
+        "fecha_envio": "2025-07-26 22:23:38",
+        "ip_address": "::1",
+        "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36"
+    },
+    {
+        "id": "survey_1753561554590_rffbi258o",
+        "calificacion_general": 1,
+        "recomendacion": 10,
+        "aspecto_comida_negativo": [
+            "caro"
+        ],
+        "aspecto_servicio_negativo": [
+            "olvidos"
+        ],
+        "aspecto_ambiente_negativo": [
+            "incomodo"
+        ],
+        "relacion_precio": "cara",
+        "fecha_envio": "2025-07-26 22:25:54",
+        "ip_address": "::1",
+        "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36"
+    },
+    {
+        "id": "survey_1753561605712_dutzbujjd",
+        "calificacion_general": 2,
+        "recomendacion": 10,
+        "aspecto_servicio": [
+            "profesional"
+        ],
+        "aspecto_comida_negativo": [
+            "caro"
+        ],
+        "aspecto_ambiente_negativo": [
+            "incomodo"
+        ],
+        "relacion_precio": "cara",
+        "fecha_envio": "2025-07-26 22:26:49",
+        "ip_address": "::1",
+        "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Code\/1.102.2 Chrome\/134.0.6998.205 Electron\/35.6.0 Safari\/537.36"
+    },
+    {
+        "id": "survey_1753561629199_l90kx6yiw",
+        "comentarios": "a",
+        "calificacion_general": 1,
+        "recomendacion": 10,
+        "aspecto_comida_negativo": [
+            "caro"
+        ],
+        "aspecto_servicio_negativo": [
+            "olvidos"
+        ],
+        "aspecto_ambiente_negativo": [
+            "incomodo"
+        ],
+        "relacion_precio": "cara",
+        "fecha_envio": "2025-07-26 22:27:09",
+        "ip_address": "::1",
+        "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36"
+    }
+]

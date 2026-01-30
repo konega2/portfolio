@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fef9f3"/>
+    </linearGradient>
+    <radialGradient id="blob" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#ff6b5a" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ff6b5a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blob2" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#a57bff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#a57bff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="970" cy="-40" r="360" fill="url(#blob)"/>
+  <circle cx="-60" cy="600" r="360" fill="url(#blob2)"/>
+
+  <rect x="70" y="88" width="1060" height="454" rx="44" fill="#ffffff" opacity="0.92"/>
+  <rect x="70" y="88" width="1060" height="454" rx="44" fill="none" stroke="#e7e5e4" stroke-width="2"/>
+
+  <g font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif">
+    <text x="130" y="215" font-size="22" fill="#78716c" letter-spacing="2" font-weight="700">PORTFOLIO</text>
+
+    <text x="130" y="300" font-size="64" fill="#0f172a" font-weight="800">Esteban</text>
+
+    <text x="130" y="362" font-size="38" fill="#0f172a" font-weight="700">Webs r&#225;pidas para negocios</text>
+
+    <text x="130" y="430" font-size="26" fill="#44403c" font-weight="500">Dise&#241;o claro &#183; SEO b&#225;sico &#183; Reservas</text>
+
+    <g>
+      <rect x="130" y="468" width="290" height="56" rx="18" fill="#ff6b5a"/>
+      <text x="160" y="505" font-size="22" fill="#ffffff" font-weight="700">Demo gratuita</text>
+    </g>
+
+    <g>
+      <rect x="440" y="468" width="330" height="56" rx="18" fill="#0f172a" opacity="0.06"/>
+      <text x="470" y="505" font-size="22" fill="#0f172a" font-weight="700">Presupuesto sin l&#237;os</text>
+    </g>
+  </g>
+</svg>

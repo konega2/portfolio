@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lumina Atelier • Peluquería Femenina</title>
+    <meta
+      name="description"
+      content="Lumina Atelier: peluquería femenina premium en Madrid. Color, styling y rituales capilares con un diseño moderno y exclusivo."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="cursor-canvas" aria-hidden="true"></canvas>
+    <button class="btn-float" type="button" data-bs-toggle="offcanvas" data-bs-target="#vipOffcanvas" aria-controls="vipOffcanvas">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+      </svg>
+    </button>
+    <div class="page">
+      <header class="header">
+        <nav class="nav">
+          <a class="logo" href="#hero">
+            <span class="logo-mark">L</span>
+            <span class="logo-text">Lumina Atelier</span>
+          </a>
+          <button class="nav-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#galeria">Galería</a>
+            <a href="#equipo">Equipo</a>
+            <a href="#precios">Precios</a>
+            <a href="#contacto" class="cta">Reservar</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section id="hero" class="hero">
+          <div class="hero-content">
+            <span class="pill">Peluquería femenina premium</span>
+            <h1>Tu cabello, <span>iluminado</span> con arte y ciencia.</h1>
+            <p>
+              En Lumina Atelier diseñamos rituales capilares personalizados para
+              mujeres que buscan un look sofisticado, saludable y único. Color,
+              corte y styling con precisión editorial.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#contacto">Agenda tu experiencia</a>
+              <a class="btn ghost" href="#servicios">Explorar servicios</a>
+            </div>
+            <div class="hero-metrics">
+              <div>
+                <h3 class="counter" data-target="12" data-suffix="+">0+</h3>
+                <p>Años elevando el color</p>
+              </div>
+              <div>
+                <h3 class="counter" data-target="4.9" data-suffix="★" data-decimals="1">0★</h3>
+                <p>Valoración media</p>
+              </div>
+              <div>
+                <h3 class="counter" data-target="2000" data-suffix="" data-format="k">0</h3>
+                <p>Rituales realizados</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="glow"></div>
+            <div class="photo-card">
+              <div class="photo"></div>
+              <div class="photo-info">
+                <h4>Signature Glow</h4>
+                <p>Balayage tridimensional + gloss.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="servicios" class="section services">
+          <div class="section-heading">
+            <p class="eyebrow">Servicios estrella</p>
+            <h2>Rituales diseñados para cada etapa.</h2>
+            <p>
+              Tratamos tu cabello como alta costura: diagnóstico, diseño y
+              ejecución impecable.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <h3>Color de Autor</h3>
+              <p>
+                Fórmulas personalizadas con técnica italiana y tonalidades que
+                se adaptan a tu piel.
+              </p>
+              <span>Desde 120€</span>
+            </article>
+            <article class="service-card">
+              <h3>Corte Editorial</h3>
+              <p>
+                Líneas limpias, movimiento inteligente y acabado a medida.
+              </p>
+              <span>Desde 65€</span>
+            </article>
+            <article class="service-card">
+              <h3>Ritual Repair</h3>
+              <p>
+                Reconstrucción profunda, brillo espejo y sellado de puntas.
+              </p>
+              <span>Desde 90€</span>
+            </article>
+            <article class="service-card">
+              <h3>Styling Luminoso</h3>
+              <p>
+                Ondas suaves, volumen controlado y protección térmica premium.
+              </p>
+              <span>Desde 45€</span>
+            </article>
+          </div>
+        </section>
+
+        <section id="experiencia" class="section experience">
+          <div class="experience-grid">
+            <div class="experience-content">
+              <p class="eyebrow">Experiencia Lumina</p>
+              <h2>Más que un salón: un atelier sensorial.</h2>
+              <p>
+                Iluminación cálida, aromas botánicos y música curada para ti.
+                Cada visita incluye diagnóstico con microcámara, cóctel de
+                bienvenida y plan de cuidado en casa.
+              </p>
+              <ul>
+                <li>Diagnóstico inteligente + historial capilar</li>
+                <li>Zona privada de coloración premium</li>
+                <li>Ritual de masaje craneal japonés</li>
+              </ul>
+              <a class="btn primary" href="#contacto">Quiero vivirlo</a>
+            </div>
+            <div class="experience-cards">
+              <div class="experience-card">
+                <h4>Glow Lab</h4>
+                <p>Laboratorio de color con pigmentos veganos.</p>
+              </div>
+              <div class="experience-card">
+                <h4>Silk Lounge</h4>
+                <p>Zona de cuidado con telas de seda y luz tenue.</p>
+              </div>
+              <div class="experience-card">
+                <h4>Styling Bar</h4>
+                <p>Peinados rápidos con acabado editorial.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="galeria" class="section gallery">
+          <div class="section-heading">
+            <p class="eyebrow">Galería</p>
+            <h2>Transformaciones con personalidad.</h2>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+          </div>
+        </section>
+
+        <section id="runway" class="section runway">
+          <div class="section-heading">
+            <p class="eyebrow">Runway Lumina</p>
+            <h2>Un desfile visual de texturas y brillo.</h2>
+            <p>
+              Inspiración editorial en movimiento con acabados hiperrealistas.
+            </p>
+          </div>
+          <div
+            id="runwayCarousel"
+            class="carousel slide lux-carousel"
+            data-bs-ride="carousel"
+            data-bs-interval="3500"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80"
+                  class="d-block w-100"
+                  alt="Balayage luminoso"
+                />
+                <div class="carousel-caption">
+                  <span class="badge bg-light text-dark">Signature Glow</span>
+                  <h3>Balayage tridimensional con gloss espejo</h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1400&q=80"
+                  class="d-block w-100"
+                  alt="Corte editorial"
+                />
+                <div class="carousel-caption">
+                  <span class="badge bg-light text-dark">Editorial Cut</span>
+                  <h3>Líneas limpias con movimiento inteligente</h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=1400&q=80"
+                  class="d-block w-100"
+                  alt="Ritual repair"
+                />
+                <div class="carousel-caption">
+                  <span class="badge bg-light text-dark">Ritual Repair</span>
+                  <h3>Textura pulida y sellado premium</h3>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#runwayCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#runwayCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </section>
+
+        <section id="equipo" class="section team">
+          <div class="section-heading">
+            <p class="eyebrow">Equipo</p>
+            <h2>Expertas en cabello, obsesionadas con el detalle.</h2>
+          </div>
+          <div class="team-grid">
+            <article class="team-card">
+              <div class="avatar"></div>
+              <h3>Ana Sanz</h3>
+              <p>Directora creativa · Color de autor</p>
+            </article>
+            <article class="team-card">
+              <div class="avatar"></div>
+              <h3>Valeria N.</h3>
+              <p>Especialista en cortes editoriales</p>
+            </article>
+            <article class="team-card">
+              <div class="avatar"></div>
+              <h3>Marina C.</h3>
+              <p>Rituales reparadores y tratamientos</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="precios" class="section pricing">
+          <div class="section-heading">
+            <p class="eyebrow">Precios</p>
+            <h2>Transparencia y lujo a tu alcance.</h2>
+          </div>
+          <div class="pricing-grid">
+            <div class="pricing-card featured">
+              <h3>Ritual Signature</h3>
+              <p class="price">220€</p>
+              <ul>
+                <li>Diagnóstico + diseño de color</li>
+                <li>Balayage multidimensional</li>
+                <li>Tratamiento repair gloss</li>
+                <li>Styling editorial</li>
+              </ul>
+              <a class="btn primary" href="#contacto">Reservar</a>
+            </div>
+            <div class="pricing-card">
+              <h3>Ritual Glow</h3>
+              <p class="price">145€</p>
+              <ul>
+                <li>Corte editorial</li>
+                <li>Color personalizado</li>
+                <li>Masaje craneal</li>
+                <li>Styling suave</li>
+              </ul>
+              <a class="btn ghost" href="#contacto">Elegir Glow</a>
+            </div>
+            <div class="pricing-card">
+              <h3>Ritual Reset</h3>
+              <p class="price">110€</p>
+              <ul>
+                <li>Diagnóstico rápido</li>
+                <li>Tratamiento repair</li>
+                <li>Sellado de puntas</li>
+                <li>Secado con brillo</li>
+              </ul>
+              <a class="btn ghost" href="#contacto">Elegir Reset</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section testimonials">
+          <div class="section-heading">
+            <p class="eyebrow">Testimonios</p>
+            <h2>Ellas ya brillan con Lumina.</h2>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <p>
+                “Nunca había tenido un color tan natural y sofisticado. El
+                equipo es una pasada.”
+              </p>
+              <span>Lucía M.</span>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                “Me encantó el diagnóstico digital y el ritual de masaje. Volví
+                al mes siguiente.”
+              </p>
+              <span>Paula R.</span>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                “El salón más moderno en el que he estado. Todo es cuidado y
+                femenino.”
+              </p>
+              <span>Inés G.</span>
+            </article>
+          </div>
+        </section>
+
+        <section id="faq" class="section faq">
+          <div class="section-heading">
+            <p class="eyebrow">FAQ premium</p>
+            <h2>Resolvemos tus dudas antes de reservar.</h2>
+            <p>
+              Una experiencia de lujo también es claridad. Aquí tienes lo esencial.
+            </p>
+          </div>
+          <div class="accordion lux-accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapseOne"
+                  aria-expanded="true"
+                  aria-controls="faqCollapseOne"
+                >
+                  ¿Cómo funciona el diagnóstico personalizado?
+                </button>
+              </h2>
+              <div
+                id="faqCollapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="faqOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Analizamos textura, porosidad y color con microcámara y diseñamos
+                  un ritual exclusivo para ti. Recibes una hoja de ruta de cuidado.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapseTwo"
+                  aria-expanded="false"
+                  aria-controls="faqCollapseTwo"
+                >
+                  ¿Cuánto dura el ritual Signature Glow?
+                </button>
+              </h2>
+              <div
+                id="faqCollapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="faqTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Entre 2,5 y 3 horas. Reservamos el tiempo exacto para que cada
+                  fase se haga con precisión editorial.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapseThree"
+                  aria-expanded="false"
+                  aria-controls="faqCollapseThree"
+                >
+                  ¿Qué debo hacer antes de mi cita?
+                </button>
+              </h2>
+              <div
+                id="faqCollapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="faqThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  No laves tu cabello 24h antes si vienes a coloración. Si tienes
+                  dudas, nuestro concierge te guía por WhatsApp.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contacto" class="section contact">
+          <div class="contact-card">
+            <div>
+              <p class="eyebrow">Reserva tu cita</p>
+              <h2>Agenda una sesión personalizada.</h2>
+              <p>
+                Te responderemos en menos de 24h con una propuesta de horario y
+                servicios.
+              </p>
+              <div class="contact-details">
+                <div>
+                  <span>Ubicación</span>
+                  <p>Calle de Alcalá 128, Madrid</p>
+                </div>
+                <div>
+                  <span>Horario</span>
+                  <p>Lun - Sáb · 09:30 - 20:00</p>
+                </div>
+                <div>
+                  <span>Contacto</span>
+                  <p>hola@luminaatelier.es · +34 910 000 123</p>
+                </div>
+              </div>
+            </div>
+            <form class="contact-form">
+              <div class="form-header">
+                <h3>Diagnóstico premium en 90 segundos</h3>
+                <p>Selecciona tu ritual y te proponemos horario ideal.</p>
+              </div>
+
+              <div class="form-grid">
+                <label class="field">
+                  <span>Nombre completo</span>
+                  <input type="text" name="name" placeholder="Tu nombre" required />
+                </label>
+                <label class="field">
+                  <span>Teléfono</span>
+                  <input type="tel" name="phone" placeholder="+34 600 000 000" required />
+                </label>
+                <label class="field">
+                  <span>Email</span>
+                  <input type="email" name="email" placeholder="tu@email.com" required />
+                </label>
+                <label class="field">
+                  <span>Preferencia de contacto</span>
+                  <select name="contact" required>
+                    <option value="">Elige una opción</option>
+                    <option>WhatsApp</option>
+                    <option>Llamada</option>
+                    <option>Email</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="form-section">
+                <p class="section-title">Ritual que deseas</p>
+                <div class="choice-grid" data-choice="service">
+                  <button type="button" class="choice-card" data-value="Color de Autor">
+                    <strong>Color de Autor</strong>
+                    <span>Diseño cromático personalizado.</span>
+                  </button>
+                  <button type="button" class="choice-card" data-value="Corte Editorial">
+                    <strong>Corte Editorial</strong>
+                    <span>Movimiento y estructura a medida.</span>
+                  </button>
+                  <button type="button" class="choice-card" data-value="Ritual Repair">
+                    <strong>Ritual Repair</strong>
+                    <span>Reconstrucción con brillo espejo.</span>
+                  </button>
+                  <button type="button" class="choice-card" data-value="Styling Luminoso">
+                    <strong>Styling Luminoso</strong>
+                    <span>Ondas suaves y acabado editorial.</span>
+                  </button>
+                </div>
+                <input type="hidden" name="service" required />
+              </div>
+
+              <div class="form-section">
+                <p class="section-title">Momento ideal</p>
+                <div class="slot-grid" data-choice="slot">
+                  <button type="button" class="slot">Mañana 9:30 - 12:00</button>
+                  <button type="button" class="slot">Mediodía 12:30 - 14:30</button>
+                  <button type="button" class="slot">Tarde 16:00 - 18:00</button>
+                  <button type="button" class="slot">Atardecer 18:30 - 20:00</button>
+                </div>
+                <input type="hidden" name="slot" required />
+              </div>
+
+              <div class="form-grid">
+                <label class="field">
+                  <span>Fecha preferida</span>
+                  <input type="date" name="date" required />
+                </label>
+                <label class="field">
+                  <span>Presupuesto orientativo</span>
+                  <select name="budget" required>
+                    <option value="">Selecciona rango</option>
+                    <option>90€ - 130€</option>
+                    <option>130€ - 180€</option>
+                    <option>180€ - 260€</option>
+                    <option>+260€</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Mensaje</span>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Cuéntanos tu objetivo, textura y color actual"
+                  required
+                ></textarea>
+              </label>
+
+              <label class="consent">
+                <input type="checkbox" name="consent" required />
+                <span>Acepto el diagnóstico capilar y el uso de mis datos para la cita.</span>
+              </label>
+
+              <button class="btn primary" type="submit">Confirmar diagnóstico</button>
+              <p class="form-note">Respuesta en 24h. Atención exclusiva con estilista senior.</p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-brand">
+          <span class="logo-mark">L</span>
+          <div>
+            <p>Lumina Atelier</p>
+            <span>Peluquería femenina · Madrid</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#servicios">Servicios</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Reservas</a>
+        </div>
+        <p class="footer-copy">© 2026 Lumina Atelier. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 11000;">
+      <div id="welcomeToast" class="toast lux-toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <span class="logo-mark me-2" style="width: 28px; height: 28px; font-size: 0.9rem;">L</span>
+          <strong class="me-auto">Lumina Atelier</strong>
+          <small>Ahora mismo</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          ✨ Bienvenida a tu próxima transformación. Agenda tu diagnóstico premium.
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end lux-offcanvas" tabindex="-1" id="vipOffcanvas" aria-labelledby="vipOffcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="vipOffcanvasLabel">Reserva VIP Express</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p class="text-muted">Reserva tu cita en menos de 60 segundos.</p>
+        <form class="vip-form">
+          <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" placeholder="Tu nombre" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">WhatsApp</label>
+            <input type="tel" class="form-control" placeholder="+34 600 000 000" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Servicio</label>
+            <select class="form-select" required>
+              <option value="">Selecciona</option>
+              <option>Color de Autor</option>
+              <option>Corte Editorial</option>
+              <option>Ritual Repair</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Enviar solicitud</button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

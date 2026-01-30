@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konega - Cafetería Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="coffee-cup">
+            <div class="steam"></div>
+            <div class="steam"></div>
+            <div class="steam"></div>
+        </div>
+        <p>Preparando tu experiencia...</p>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>KONEGA</h1>
+                <span>Premium Coffee</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#menu" class="nav-link">Menú</a></li>
+                <li><a href="#about" class="nav-link">Nosotros</a></li>
+                <li><a href="#gallery" class="nav-link">Galería</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="word">Bienvenido</span>
+                    <span class="word">a</span>
+                    <span class="word">KONEGA</span>
+                </h1>
+                <p class="hero-subtitle">Donde cada taza cuenta una historia</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Ver Menú</button>
+                    <button class="btn btn-secondary">Hacer Reserva</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" alt="Café artesanal">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Características -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Café Premium</h3>
+                    <p>Granos seleccionados de las mejores plantaciones del mundo</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Abierto 24/7</h3>
+                    <p>Siempre listos para servirte el mejor café a cualquier hora</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>WiFi Gratis</h3>
+                    <p>Ambiente perfecto para trabajar o estudiar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestro Menú</h2>
+                <p>Descubre sabores únicos en cada sorbo</p>
+            </div>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="coffee">Cafés</button>
+                <button class="category-btn" data-category="food">Comida</button>
+                <button class="category-btn" data-category="dessert">Postres</button>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Espresso">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Espresso Konega</h3>
+                        <p>Intenso y aromático, el café perfecto para despertar tus sentidos</p>
+                        <span class="price">$4.50</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80" alt="Latte">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Latte Art Especial</h3>
+                        <p>Cremoso latte con arte personalizado en cada taza</p>
+                        <span class="price">$6.00</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="food">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80" alt="Croissant">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Croissant Artesanal</h3>
+                        <p>Recién horneado, crujiente por fuera y suave por dentro</p>
+                        <span class="price">$5.50</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="dessert">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1489&q=80" alt="Cheesecake">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Cheesecake de Café</h3>
+                        <p>Delicioso cheesecake con toques de café y chocolate</p>
+                        <span class="price">$7.50</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80" alt="Cappuccino">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Cappuccino Premium</h3>
+                        <p>Equilibrio perfecto entre espresso, leche y espuma</p>
+                        <span class="price">$5.75</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="food">
+                    <div class="menu-image">
+                        <img src="images/tostada aguacate.jpg" alt="Tostada de aguacate">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Tostada Avocado</h3>
+                        <p>Pan artesanal con aguacate fresco y especias</p>
+                        <span class="price">$8.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Nuestra Historia</h2>
+                    <p>En Konega, creemos que cada taza de café es una oportunidad para crear momentos especiales. Desde 2020, hemos estado sirviendo los mejores granos de café, cuidadosamente seleccionados y tostados a la perfección.</p>
+                    <p>Nuestro compromiso es ofrecer no solo un excelente café, sino una experiencia completa que despierte todos tus sentidos.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Clientes Felices</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Variedades de Café</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Café Orgánico</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" alt="Interior de la cafetería">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galería</h2>
+                <p>Momentos especiales en Konega</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1378&q=80" alt="Barista preparando café">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" alt="Granos de café">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Ambiente acogedor">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" alt="Taza de café artístico">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Visítanos</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Av. Principal 123, Centro<br>Ciudad, País</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+1 234 567 890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hola@konega.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horarios</h3>
+                            <p>Lunes - Domingo<br>6:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Escríbenos</h2>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Asunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>KONEGA</h3>
+                    <p>Premium Coffee Experience</p>
+                </div>
+                <p>&copy; 2025 Konega Cafetería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Coffee Bean -->
+    <div class="floating-bean">
+        <i class="fas fa-coffee"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
