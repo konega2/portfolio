@@ -58,3 +58,4 @@ En móvil/Chrome debería aparecer la opción de instalar. También sale un bot�
 - **Warm Purple**: `#a57bff` (gradientes, detalles)
 - **Neutral**: grises cálidos para texto
 
+# portfolio
