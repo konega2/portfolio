@@ -67,10 +67,6 @@ function Caja() {
     }
   };
 
-  const abrirDialog = () => {
-    setOpenDialog(true);
-  };
-
   const cerrarDialog = () => {
     setOpenDialog(false);
   };
